@@ -1,0 +1,22 @@
+2026-04-04 21:45:02,060 - INFO - Pipeline started
+2026-04-04 21:45:02,513 - ERROR - Pipeline failed: database disk image is malformed
+2026-04-04 22:09:44,031 - INFO - Pipeline started
+2026-04-04 22:09:44,451 - ERROR - Pipeline failed: database disk image is malformed
+2026-04-05 13:36:16,651 - INFO - Pipeline started
+2026-04-05 13:36:17,105 - ERROR - Pipeline failed: database disk image is malformed
+2026-04-05 13:41:17,302 - INFO - Pipeline started
+2026-04-05 13:41:17,690 - INFO - Loading data into SQLite
+2026-04-05 13:41:17,691 - ERROR - SQLite load failed: database disk image is malformed
+2026-04-05 13:41:17,691 - ERROR - Pipeline failed: database disk image is malformed
+2026-04-05 13:54:17,548 - INFO - Pipeline started
+2026-04-05 13:54:17,971 - INFO - Loading data into SQLite
+2026-04-05 13:54:17,972 - ERROR - SQLite load failed: database disk image is malformed
+2026-04-05 13:54:17,972 - ERROR - Pipeline failed: database disk image is malformed
+2026-04-05 14:14:06,096 - INFO - Pipeline started
+2026-04-05 14:14:06,490 - INFO - Loading data into SQLite
+2026-04-05 14:14:06,509 - INFO - Data saved to SQLite successfully
+2026-04-05 14:14:06,509 - INFO - Pipeline finished successfully
+2026-04-05 14:14:44,324 - INFO - Pipeline started
+2026-04-05 14:14:44,726 - INFO - Loading data into SQLite
+2026-04-05 14:14:44,749 - INFO - Data saved to SQLite successfully
+2026-04-05 14:14:44,750 - INFO - Pipeline finished successfully

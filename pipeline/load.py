@@ -1,21 +1,53 @@
 import sqlite3
+import logging
+from pathlib import Path
 
-def load_weather(record):
-    conn = sqlite3.connect("data/weather.db")
-    cursor = conn.cursor()
+DB_PATH = Path("data/weather.db")
 
-    cursor.execute("""
+
+def load_weather(data):
+    try:
+        logging.info("Loading data into SQLite")
+
+        # connect (creates DB if missing)
+        conn = sqlite3.connect(DB_PATH)
+        cursor = conn.cursor()
+
+        # create table if not exists
+        cursor.execute("""
         CREATE TABLE IF NOT EXISTS weather (
-            time TEXT,
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            timestamp TEXT,
+            latitude REAL,
+            longitude REAL,
             temperature REAL,
             windspeed REAL
         )
-    """)
+        """)
 
-    cursor.execute(
-        "INSERT INTO weather VALUES (?, ?, ?)",
-        (record["time"], record["temperature"], record["windspeed"])
-    )
+        # insert data
+        cursor.execute("""
+        INSERT INTO weather (
+            timestamp,
+            latitude,
+            longitude,
+            temperature,
+            windspeed
+        )
+        VALUES (?, ?, ?, ?, ?)
+        """, (
+            data["timestamp"],
+            data["latitude"],
+            data["longitude"],
+            data["temperature"],
+            data["windspeed"]
+        ))
 
-    conn.commit()
-    conn.close()
+        conn.commit()
+        conn.close()
+
+        logging.info("Data saved to SQLite successfully")
+
+    except Exception as e:
+        logging.error(f"SQLite load failed: {e}")
+        raise

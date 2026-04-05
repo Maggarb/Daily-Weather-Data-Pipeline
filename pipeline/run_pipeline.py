@@ -1,10 +1,19 @@
 import logging
 from utils.logger import setup_logger
-
+from dotenv import load_dotenv
+import os
 
 from pipeline.extract import extract_weather
 from pipeline.transform import transform_weather
 from pipeline.load import load_weather
+
+# Load environment variables
+load_dotenv()
+
+# Get coordinates from .env
+LAT = float(os.getenv("LATITUDE"))
+LON = float(os.getenv("LONGITUDE"))
+
 
 setup_logger()
 
