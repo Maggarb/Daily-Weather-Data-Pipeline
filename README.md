@@ -60,7 +60,7 @@ LONGITUDE=-21.9426
 Execute the pipeline:
 
 ```bash
-python run_pipeline.py
+python -m pipeline.run_pipeline
 ```
 
 The pipeline will:
