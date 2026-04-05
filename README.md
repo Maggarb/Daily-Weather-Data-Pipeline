@@ -94,6 +94,23 @@ Pipeline execution logs include:
 Logging helps monitor pipeline reliability and simplifies debugging.
 
 ---
+## Data Analysis & Visualization 
+
+In addition to the ETL pipeline, this project includes a **data analysis module** that reads stored weather data from the SQLite database and generates visualizations.
+
+The `analysis/visualize.py` script:
+
+1. Connects to the SQLite database (`data/weather.db`)  
+2. Loads weather records into a Pandas DataFrame  
+3. Converts timestamps to proper datetime format  
+4. Plots temperature trends over time using Matplotlib  
+
+### Example Usage
+
+Run the visualization script:
+
+```bash
+py analysis/visualize.py
 
 ## Technologies Used
 
