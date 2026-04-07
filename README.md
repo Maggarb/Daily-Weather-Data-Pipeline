@@ -107,7 +107,8 @@ The `analysis/visualize.py` script:
 
 ### Example Usage
 
-Run the visualization script: ```bash py analysis/visualize.py ```
+Run the visualization script: ```bash 
+py analysis/visualize.py ```
 
 ## Technologies Used
 
